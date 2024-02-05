@@ -47,7 +47,7 @@ function App() {
       <div className="todo-list">
         {taskList.map((task, index) => {
           return (
-            <div className="item" id={index} onClick={deleteTask}>
+            <div className="item" id={index}>
               <p>
                 <strong>Feladat: </strong>
                 {task.task}
@@ -56,7 +56,7 @@ function App() {
                 <strong>Rászánt idő: </strong>
                 {task.time}
               </p>
-              <button value={index}>Delete</button>
+              <button value={index} onClick={deleteTask}>Delete</button>
             </div>
           );
         })}
